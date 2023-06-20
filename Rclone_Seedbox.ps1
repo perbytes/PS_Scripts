@@ -16,9 +16,7 @@ $sourceDirectory = "Seedbox:/temp/example/"
 $destinationDirectory = "C:\Users\JonDoe\Example"
 $logFilePath = "C:\Users\JonDoe\Desktop\rclone\log.txt" 
 
-$retries = 3
-
-$rcloneCommand = "$rclonePath move --bwlimit 12M --progress --delete-empty-src-dirs --verbose --log-file=$logFilePath --no-traverse --checksum --transfers=4 --retries=$retries $sourceDirectory $destinationDirectory"
+$rcloneCommand = "$rclonePath move --bwlimit 12M --progress --delete-empty-src-dirs --verbose --log-file=$logFilePath --no-traverse --checksum --transfers=4 --retries=4 $sourceDirectory $destinationDirectory"
 
 try {
     Invoke-Expression $rcloneCommand
